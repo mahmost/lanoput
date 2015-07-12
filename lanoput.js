@@ -1,7 +1,7 @@
 /*
- * Lanoput.js
+ * Lanoput.js 0.1.0
  *
- * Change language of input
+ * Change input language of input/textarea automatically to comply with the element lang attribute
  * 
  * forked from FarsiType 1.3.6 (http://www.farsitype.ir)
  * Licensed under the GPL (http://www.opensource.org/licenses/gpl-license.php) license.
