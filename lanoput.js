@@ -43,7 +43,8 @@ if (typeof HTMLElement !== "undefined" && ! HTMLElement.prototype.insertAdjacent
   };
 }
 
-var lanoput = {
+// make it a global variable (was required for meteor)
+window.lanoput = {
   // initialize an empty object to be filled by languages by loading language
   // scripts such as lanoput.ar.js
   languages : {},
