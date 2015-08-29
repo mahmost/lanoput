@@ -96,11 +96,13 @@ lanoput.disable = function() {
 
 lanoput.init = function() {
   var Inputs = document.getElementsByTagName('INPUT'), i;
+  lanoput.counter = 0;
   for (i=0; i<Inputs.length; i++) {
     // TODO enable aliases
     if ((Inputs[i].type.toLowerCase() == 'text') && lanoput.languages[Inputs[i].lang.toLowerCase()]) {
       lanoput.counter++;
-      new lanoput.KeyObject(Inputs[i], lanoput.counter);
+      if (typeof Inputs[i].lanoput === "undefined")
+        new lanoput.KeyObject(Inputs[i], lanoput.counter);
     }
   }
 
@@ -109,7 +111,8 @@ lanoput.init = function() {
     // TODO enable aleases
     if (lanoput.languages[Areas[i].lang.toLowerCase()]) {
       lanoput.counter++;
-      new lanoput.KeyObject(Areas[i], lanoput.counter);
+      if (typeof Areas[i].lanoput === "undefined")
+        new lanoput.KeyObject(Areas[i], lanoput.counter);
     }
   }
 
