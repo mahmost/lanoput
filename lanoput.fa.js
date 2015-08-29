@@ -1,3 +1,26 @@
+/**
+ * lanoput.fa.js
+ *
+ *  Copyright 2015 by Mahmoud Mostafa <mah@moud.info>
+ *  Copyright 2002-2011 by Kaveh Ahmadi <http://www.kavehahmadi.com>, <email: me@kavehahmadi.com)>
+ *
+ * This file is part of Lanoput.
+ *
+ * Lanoput is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Lanoput is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+ * for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Lanoput.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
 lanoput.languages.fa = {
   "title" : "Farsi",
   // Farsi keyboard map based on Iran Popular Keyboard Layout
