@@ -16,8 +16,8 @@ after DOM is loaded
 
 ## License
 
-Copyright 2015 by Mahmoud Mostafa <mah@moud.info>
-Copyright 2002-2011 by Kaveh Ahmadi <http://www.kavehahmadi.com>, <email: me@kavehahmadi.com)>
+Copyright 2015 by Mahmoud Mostafa <mah@moud.info><br>
+Copyright 2002-2011 by Kaveh Ahmadi <http://www.kavehahmadi.com> <email: me@kavehahmadi.com)>
  
 Lanoput is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
  
