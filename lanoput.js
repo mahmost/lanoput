@@ -1,10 +1,26 @@
-/*
- * Lanoput.js 0.1.0
+/**
+ * Lanoput.js 0.2.0
  *
  * Change input language of input/textarea automatically to comply with the element lang attribute
- * 
- * forked from FarsiType 1.3.6 (http://www.farsitype.ir)
- * Licensed under the GPL (http://www.opensource.org/licenses/gpl-license.php) license.
+ * forked from FarsiType 1.3.6 (http://www.farsitype.ir)d
+ *
+ *  Copyright 2015 by Mahmoud Mostafa <mah@moud.info>
+ *  Copyright 2002-2011 by Kaveh Ahmadi <http://www.kavehahmadi.com>, <email: me@kavehahmadi.com)>
+ *
+ * This file is part of Lanoput.
+ *
+ * Lanoput is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Lanoput is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+ * for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Lanoput.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
 
@@ -43,7 +59,8 @@ if (typeof HTMLElement !== "undefined" && ! HTMLElement.prototype.insertAdjacent
   };
 }
 
-var lanoput = {
+// make it a global variable (was required for meteor)
+window.lanoput = {
   // initialize an empty object to be filled by languages by loading language
   // scripts such as lanoput.ar.js
   languages : {},
@@ -95,11 +112,13 @@ lanoput.disable = function() {
 
 lanoput.init = function() {
   var Inputs = document.getElementsByTagName('INPUT'), i;
+  lanoput.counter = 0;
   for (i=0; i<Inputs.length; i++) {
     // TODO enable aliases
     if ((Inputs[i].type.toLowerCase() == 'text') && lanoput.languages[Inputs[i].lang.toLowerCase()]) {
       lanoput.counter++;
-      new lanoput.KeyObject(Inputs[i], lanoput.counter);
+      if (typeof Inputs[i].lanoput === "undefined")
+        new lanoput.KeyObject(Inputs[i], lanoput.counter);
     }
   }
 
@@ -108,7 +127,8 @@ lanoput.init = function() {
     // TODO enable aleases
     if (lanoput.languages[Areas[i].lang.toLowerCase()]) {
       lanoput.counter++;
-      new lanoput.KeyObject(Areas[i], lanoput.counter);
+      if (typeof Areas[i].lanoput === "undefined")
+        new lanoput.KeyObject(Areas[i], lanoput.counter);
     }
   }
 
