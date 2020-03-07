@@ -320,6 +320,7 @@ lanoput.KeyObject = function(z,x) {
         if (e.preventDefault)
           e.preventDefault();
         e.returnValue = false;
+        if (e.target && window.InputEvent) e.target.dispatchEvent(new InputEvent('input'));
       }
     }
     return true;
