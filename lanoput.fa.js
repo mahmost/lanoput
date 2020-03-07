@@ -2,7 +2,7 @@
  * lanoput.fa.js
  *
  *  Copyright 2015 by Mahmoud Mostafa <mah@moud.info>
- *  Copyright 2002-2011 by Kaveh Ahmadi <http://www.kavehahmadi.com>, <email: me@kavehahmadi.com)>
+ *  Copyright 2002-2011 by Kaveh Ahmadi <http://www.kavehahmadi.com> <me@kavehahmadi.com>
  *
  * This file is part of Lanoput.
  *
